@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Voice Recorder</h1>
+    
+        <!-- Input for uploading a voice file -->
+        <input type="file" id="fileInput" accept="audio/*">
+    
+        <!-- Button to start recording -->
+        <button id="recordButton">Record</button>
+    
+        <!-- Button to replay the recorded or uploaded audio -->
+        <button id="replayButton" disabled>Replay</button>
+    
+        <!-- Audio player for playing the recorded or uploaded audio -->
+        <audio id="audioPlayer" controls></audio>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const fileInput = document.getElementById('fileInput');
+                const recordButton = document.getElementById('recordButton');
+                const replayButton = document.getElementById('replayButton');
+                const audioPlayer = document.getElementById('audioPlayer');
+                let recordedAudioBlob;
+    
+                // Event listener for file input change
+                fileInput.addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        recordedAudioBlob = null;
+                        replayButton.disabled = false;
+                        audioPlayer.src = URL.createObjectURL(file);
+                    }
+                });
+    
+                // Event listener for record button click
+                recordButton.addEventListener('click', async function () {
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        const mediaRecorder = new MediaRecorder(stream);
+                        const chunks = [];
+    
+                        mediaRecorder.addEventListener('dataavailable', function (event) {
+                            if (event.data.size > 0) {
+                                chunks.push(event.data);
+                            }
+                        });
+    
+                        mediaRecorder.addEventListener('stop', function () {
+                            recordedAudioBlob = new Blob(chunks, { type: 'audio/wav' });
+                            replayButton.disabled = false;
+                            audioPlayer.src = URL.createObjectURL(recordedAudioBlob);
+                        });
+    
+                        mediaRecorder.start();
+    
+                        // Allow recording for 5 seconds (adjust as needed)
+                        setTimeout(() => {
+                            mediaRecorder.stop();
+                            stream.getTracks().forEach(track => track.stop());
+                        }, 5000);
+                    } catch (error) {
+                        console.error('Error accessing microphone:', error);
+                    }
+                });
+    
+                // Event listener for replay button click
+                replayButton.addEventListener('click', function () {
+                    if (recordedAudioBlob) {
+                        audioPlayer.src = URL.createObjectURL(recordedAudioBlob);
+                    }
+                });
+            });
+        </script>
+       
+</body>
+</html>
