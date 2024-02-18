@@ -11,20 +11,26 @@
 <body class="bg-black">
 
     <header>
-        <nav class="bg-blue-500 py-4 fixed w-full top-0 z-50">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo / Home Button -->
-                <div class="text-white text-2xl font-bold">
-                    <a href="#HOME"class="px-4 py-2 hover:bg-blue-700">NEMESIS</a>
-                </div>
-                <div class="text-white text-lg">
-                    <a href="#id1" class="px-4 py-2 hover:bg-blue-700">About</a>
-                    <a href="#" class="px-4 py-2 hover:bg-blue-700">Database</a>
-                    <a href="#diseases" class="px-4 py-2 hover:bg-blue-700">Diseases</a>
-                    <a href="#contact" class="px-4 py-2 hover:bg-blue-700">Contact Us</a>
-                </div>
+      <nav class="bg-blue-500 py-2 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo / Home Button -->
+            <div class="text-white text-2xl font-bold">
+                <a href="#HOME" class="px-4 py-2 hover:bg-blue-700">NEMESIS</a>
             </div>
-        </nav>    
+            <!-- Menu Icon for Small Screens -->
+            <div class="lg:hidden">
+              <button id="menu-toggle" class="text-white text-xl focus:outline-none">&#9776;</button>
+          </div>
+          <!-- Navigation Links -->
+          <div class="hidden lg:flex lg:items-center lg:justify-end lg:text-lg navigation-links">
+              <a href="#id1" class="px-4 py-2 hover:bg-blue-700">About</a>
+              <a href="#" class="px-4 py-2 hover:bg-blue-700">Database</a>
+              <a href="#diseases" class="px-4 py-2 hover:bg-blue-700">Diseases</a>
+              <a href="#contact" class="px-4 py-2 hover:bg-blue-700">Contact Us</a>
+          </div>
+        </div>
+    </nav>
+    
     </header>
     <br><br><br><br>
 
@@ -80,12 +86,15 @@
           </div>
         </div>
         <br><br>
-        <div class="grid px-3 py-8 grid-cols-4 md:grid-cols-2 gap-6">
+        <div id="id1" class="grid px-3 py-8  gap-6">
           <div class="bg-blue-500 p-6 rounded-lg shadow-md hover:bg-blue-600">
               <h2 class="text-xl font-semibold mb-4">Welcome to Our Website</h2>
-              <p class="text-white">Welcome to Nemesis Technologies! Elevating your audio experience, we specialize in feature extraction from voice data, delivering comprehensive reports on voice quality through diverse feature analyses. Explore the future of voice technology with us!</p>
+              <p class="text-white">Welcome to Nemesis Technologies! Elevating your audio experience, we specialize in feature extraction from voice data, delivering comprehensive reports on voice quality through diverse feature analyses. Explore the future of voice technology with us!                            At Nemesis Technologies, our mission is to empower individuals with proactive and personalized 
+                health insights. We believe that early detection and understanding of health issues are crucial for 
+                better outcomes. By harnessing the power of voice analysis and data-driven predictions, we aim to 
+                provide a platform that fosters early intervention and improved well-being.</p>
           </div>
-          <div id="id1" class="service bg-white p-6 rounded-lg shadow-md">
+          <div  class="service bg-white p-6 rounded-lg shadow-md">
               <h2 class="text-xl font-semibold mb-4">Our Services</h2>
               <ul class="list-disc list-inside text-blue-600">
                   <li>Feature Extarction</li>
@@ -94,58 +103,94 @@
                   <li>Immediate remedies </li>
               </ul>
           </div>
+          <div class="bg-white" style="overflow-x:hidden;">
+            <div class="slide-container">
+              <div class="slider">
+                <img src="voice1.png" alt="" class="image-item bg-black">
+                <img src="voice2.png" alt="" class="image-item bg-black">
+                <img src="voice3.png" alt="" class="image-item bg-black">
+                <img src="voice6.png" alt="" class="image-item bg-white">
+                <img src="voice7.jpg" alt="" class="image-item bg-black">
+                <img src="voice8.jpg" alt="" class="image-item bg-black">
+                <img src="voice5.jpg" alt="" class="image-item bg-black">
+              </div>
+            </div>
+            <br><br>
+            <div clas="grid-cols-1 md:grid-cols-2 gap-y-6">
+              <button id="prevBtn" class="text-white bg-blue-500 w-56">Previous</button>
+              <button id="nextBtn" class="text-white bg-blue-500 w-56">Next</button>
+            </div>
+          </div>
       </div>
       <div id="diseases"class="grid rows px-3 md:grid-cols-1 gap-6 bg-white rounded-lg">
         <div>
-          <h1 class="text-black text-xl mb-4 font-bold">DISEASES</h1>
-          <div class="grid px-3 grid-cols-1 md:grid-cols-2 gap-6">
-            <div >
-              <p>
-                <h3 class="text-blue-500 text-2xl font-semibold">GERD(Gastroesophageal Reflux Disease):</h3>
-                <ul class="list-inside list-disc ">
-                  <li><font face="impact">Persistent Heartburn:</font>  GERD causes frequent and persistent heartburn due to stomach acid backing up into the esophagus.</li>
-                  <li><font face="impact">Esophageal Damage:</font> Long-term acid exposure can lead to inflammation, ulcers, strictures, and Barrett's esophagus, increasing cancer risk.</li>
-                  <li><font face="impact">Treatment Options:</font> Lifestyle changes, medication (such as PPIs and H2 blockers), and surgery are common approaches to manage GERD and prevent complications.<br><br><br><br><br></li>
-                </ul>
-              </p>
-              <img src="voicenodule.jpg" class="mx-auto h-96 w-96">
-              <p>
-                <h3 class="text-blue-500 text-2xl font-semibold">Tonsillitis:</h3>
-                <ul class="list-inside list-disc ">
-                  <li><font face="impact">Sore Throat and Difficulty Swallowing:</font>  Tonsillitis is characterized by a sore throat, often accompanied by pain or difficulty swallowing.</li>
-                  <li><font face="impact">Swollen Tonsils: </font> The tonsils, located at the back of the throat, become inflamed and swollen due to viral or bacterial infections.</li>
-                  <li><font face="impact">Treatment Options:</font> Treatment may include rest, fluids, pain relievers, and antibiotics in bacterial cases. Severe or recurrent tonsillitis may require surgical removal of the tonsils (tonsillectomy) to alleviate symptoms and prevent further infections.                  </li>
-                </ul>
-              </p>
-              
-              <img src="vocalfoldedema.jpg" class="mx-auto h-96 w-96">
+          <br><br><br>
+            <h1 class="text-black text-xl mb-4 font-bold">DISEASES</h1>
+            <div class="grid px-3 grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p>
+                        <h3 class="text-blue-500 text-2xl font-semibold">GERD(Gastroesophageal Reflux Disease):</h3>
+                        <ul class="list-inside list-disc ">
+                          <li><font face="impact">Persistent Heartburn:</font>  GERD causes frequent and persistent heartburn due to stomach acid backing up into the esophagus.</li>
+                          <li><font face="impact">Esophageal Damage:</font> Long-term acid exposure can lead to inflammation, ulcers, strictures, and Barrett's esophagus, increasing cancer risk.</li>
+                          <li><font face="impact">Treatment Options:</font> Lifestyle changes, medication (such as PPIs and H2 blockers), and surgery are common approaches to manage GERD and prevent complications.<br><br><br><br><br></li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <img src="gerd.png" class="mx-auto h-86 w-64">
+                </div>
             </div>
-
-            <div>
-              <img src="gerd.png" class="mx-auto h-86 w-64">
-              <p>
-                <h3 class="text-blue-500 text-2xl font-semibold">Voice Nodule</h3>
-                <ul class="list-inside list-disc ">
-                  <li><font face="impact">Hoarseness and Strain: </font> Voice nodules cause persistent hoarseness and vocal strain, often resulting from vocal cord overuse or misuse.</li>
-                  <li><font face="impact">Vocal Cord Damage: </font>  Prolonged strain can lead to the formation of nodules, callous-like growths on the vocal cords, impairing voice quality and function.</li>
-                  <li><font face="impact">Treatment Approaches: </font> Treatment typically involves voice therapy to correct vocal habits and reduce strain, along with rest and hydration. In severe cases, surgical removal may be necessary to alleviate symptoms and restore vocal health.</li>
-                </ul>
-              </p>
-              <br><br><br><br>
-              <img src="tonsils.png" class="mx-auto h-66 w-64">
-              <br><br><br><br>
-              <p>
-                <h3 class="text-blue-500 text-2xl font-semibold">Vocal Fold Edema:</h3>
-                <ul class="list-inside list-disc ">
-                  <li><font face="impact">Symptoms: </font> Vocal fold edema manifests as hoarseness, difficulty speaking, and throat discomfort.</li>
-                  <li><font face="impact">Causes: </font>   It results from vocal strain, infections, allergies, or irritants like smoking and acid reflux.</li>
-                  <li><font face="impact">Treatment : </font> Treatments include vocal rest, hydration, and medications to reduce inflammation, with surgery in severe cases.</li>
-                </ul>
-              </p>
+            <br>
+            <div class="grid px-3 grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p>
+                        <h3 class="text-blue-500 text-2xl font-semibold">Voice Nodule</h3>
+                        <ul class="list-inside list-disc ">
+                          <li><font face="impact">Hoarseness and Strain: </font> Voice nodules cause persistent hoarseness and vocal strain, often resulting from vocal cord overuse or misuse.</li>
+                          <li><font face="impact">Vocal Cord Damage: </font>  Prolonged strain can lead to the formation of nodules, callous-like growths on the vocal cords, impairing voice quality and function.</li>
+                          <li><font face="impact">Treatment Approaches: </font> Treatment typically involves voice therapy to correct vocal habits and reduce strain, along with rest and hydration. In severe cases, surgical removal may be necessary to alleviate symptoms and restore vocal health.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <img src="voicenodule.jpg" class="mx-auto h-96 w-96">
+                </div>
             </div>
-          </div>
+            <br>
+            <div class="grid px-3 grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                        <p>
+                            <h3 class="text-blue-500 text-2xl font-semibold">Tonsillitis:</h3>
+                            <ul class="list-inside list-disc ">
+                              <li><font face="impact">Sore Throat and Difficulty Swallowing:</font>  Tonsillitis is characterized by a sore throat, often accompanied by pain or difficulty swallowing.</li>
+                              <li><font face="impact">Swollen Tonsils: </font> The tonsils, located at the back of the throat, become inflamed and swollen due to viral or bacterial infections.</li>
+                              <li><font face="impact">Treatment Options:</font> Treatment may include rest, fluids, pain relievers, and antibiotics in bacterial cases. Severe or recurrent tonsillitis may require surgical removal of the tonsils (tonsillectomy) to alleviate symptoms and prevent further infections.                  </li>
+                            </ul>
+                          </p>
+                </div>
+                <div>
+                    <img src="tonsils.png" class="mx-auto h-96 w-96">
+                </div>
+            </div>
+            <br>
+            <div class="grid px-3 grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p>
+                        <h3 class="text-blue-500 text-2xl font-semibold">Vocal Fold Edema:</h3>
+                        <ul class="list-inside list-disc ">
+                          <li><font face="impact">Symptoms: </font> Vocal fold edema manifests as hoarseness, difficulty speaking, and throat discomfort.</li>
+                          <li><font face="impact">Causes: </font>   It results from vocal strain, infections, allergies, or irritants like smoking and acid reflux.</li>
+                          <li><font face="impact">Treatment : </font> Treatments include vocal rest, hydration, and medications to reduce inflammation, with surgery in severe cases.</li>
+                        </ul>
+                      </p>
+                </div>
+                <div>
+                    <img src="vocalfoldedema.jpg" class="mx-auto h-96 w-96">
+                </div>
+            </div>
         </div>
-      </div>        
+    </div>      
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
           <div class="sm:mx-auto sm:w-full sm:max-w-sm">
               <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
@@ -224,5 +269,52 @@
             <p>&copy; 2024 Nemesis Technologies All rights reserved.</p>
         </div>
     </footer>
+    <script>
+      // JavaScript to toggle the visibility of navigation links
+      document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.getElementById('menu-toggle');
+          const navigationLinks = document.querySelector('.navigation-links');
+  
+          menuToggle.addEventListener('click', function () {
+              navigationLinks.classList.toggle('hidden');
+          });
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.slider');
+  const images = document.querySelectorAll('.slider img');
+
+  let counter = 0;
+  const width = images[0].clientWidth;
+
+  function slideNext() {
+    if (counter >= images.length - 1) {
+      counter = 0;
+    } else {
+      counter++;
+    }
+
+    slider.style.transform = `translateX(${-width * counter}px)`;
+  }
+
+  function slidePrev() {
+    if (counter <= 0) {
+      counter = images.length - 1;
+    } else {
+      counter--;
+    }
+
+    slider.style.transform = `translateX(${-width * counter}px)`;
+  }
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  prevBtn.addEventListener('click', slidePrev);
+  nextBtn.addEventListener('click', slideNext);
+});
+
+
+  </script>
+  
 </body>
 </html>
